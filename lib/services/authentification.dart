@@ -1,14 +1,15 @@
-/*import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freeshop/models/user.dart';
 
 class AuthentificationService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  AppUser? _userFromFirebaseUser(User user) {
-    if (user != null) {
-     // return AppUser(uid: user.uid);
-    } else {
-      return null;
-    }
+
+  AppUser _userFromFirebaseUser(User user) {
+    return user != null ? AppUser(uid: user.uid) : null;
+  }
+
+  Stream<AppUser> get user {
+    return _auth.authStateChanges().map(_userFromFirebaseUser);
   }
 
   Future SignInWithEmailAndPassword(String email, String password) async {
@@ -16,7 +17,7 @@ class AuthentificationService {
       UserCredential result = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
       User user = result.user;
-      return user;
+      return _userFromFirebaseUser(user);
     } catch (exception) {
       print(exception.toString());
       return null;
@@ -46,4 +47,3 @@ class AuthentificationService {
     }
   }
 }
-*/
