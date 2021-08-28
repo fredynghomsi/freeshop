@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../common/loading.dart';
+//import '../common/loading.dart';
 import '../main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:freeshop/delayed_animation.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PageLogin extends StatelessWidget {
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -136,7 +136,6 @@ class _LoginFormState extends State<LoginForm> {
   final emailController = TextEditingController();
   final passController = TextEditingController();
 
-  @override
   void disoose() {
     emailController.dispose();
     passController.dispose();

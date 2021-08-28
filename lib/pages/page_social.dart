@@ -1,9 +1,7 @@
-import 'package:freeshop/pages/inscription.dart';
 import 'package:freeshop/pages/page_login.dart';
-import 'inscription.dart';
+import 'ecran_connexion copy.dart';
 import '../main.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import '../delayed_animation.dart';
 
@@ -103,7 +101,7 @@ class PageSocial extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Inscription(),
+                                  builder: (context) => Connexion(),
                                 ));
                           },
                           style: ElevatedButton.styleFrom(

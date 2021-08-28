@@ -11,7 +11,6 @@ class PageAcceuil extends StatefulWidget {
 
 class _PageAcceuilState extends State<PageAcceuil> {
   int _selectedIndex = 0;
-  @override
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;

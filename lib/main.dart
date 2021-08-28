@@ -1,9 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:freeshop/pages/page_acceuil.dart';
-import 'delayed_animation.dart';
-import 'pages/page_bienvenue.dart';
-import 'package:freeshop/pages/page_login.dart';
+import 'package:freeshop/pages/createAccount.dart';
+//import 'package:freeshop/pages/ecran_connexion.dart';
+import 'package:freeshop/pages/ecran_inscription-copy.dart';
+import 'package:freeshop/pages/login_screen.dart';
+import 'package:freeshop/services/Authenticate.dart';
+
+import 'pages/ecran_inscription-copy.dart';
+//import 'package:freeshop/pages/ecran_inscription.dart';
+//import 'package:freeshop/services/BDconnexion.dart';
 
 const d_red = const Color(0xFFE9717D);
 
@@ -22,10 +27,13 @@ class MyApp extends StatelessWidget {
       title: 'Freeshop', debugShowCheckedModeBanner: false,
       //home: MenuPage(),
       //home: PageBienvenue(),
-      routes: {
+      //home: Inscription(),
+      home: Authenticate(),
+      /* routes: {
         '/': (_) => PageAcceuil(),
         PageAcceuil.routeName: (_) => PageAcceuil(),
       },
+      */
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './main_drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../delayed_animation.dart';
+//import '../delayed_animation.dart';
 import '../delayed_animation.dart';
 import 'page_social.dart';
 import '../main.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freeshop/pages/page_acceuil.dart';
-import 'package:freeshop/pages/page_bienvenue.dart';
+//import 'package:freeshop/pages/page_bienvenue.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
