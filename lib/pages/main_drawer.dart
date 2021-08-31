@@ -11,7 +11,8 @@ class MainDrawer extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.all(20),
-            color: Theme.of(context).primaryColor,
+            //color: Theme.of(context).primaryColor,
+            color: Colors.white70,
             child: Center(
               child: Column(
                 children: <Widget>[
@@ -31,12 +32,12 @@ class MainDrawer extends StatelessWidget {
                   // A ce niveau on affiche le nom de l'utilisateur
                   Text(
                     'Fredy Nghomsi',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                    style: TextStyle(fontSize: 18, color: Colors.grey),
                   ),
                   // A ce niveau on affiche l'adresse email de l'utilisateur
                   Text(
                     'flb830@gmail.com',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                    style: TextStyle(fontSize: 18, color: Colors.black),
                   )
                 ],
               ),

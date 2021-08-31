@@ -1,12 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:freeshop/pages/createAccount.dart';
+import 'package:freeshop/pages/page_acceuil.dart';
+//import 'package:freeshop/pages/createAccount.dart';
 //import 'package:freeshop/pages/ecran_connexion.dart';
-import 'package:freeshop/pages/ecran_inscription-copy.dart';
-import 'package:freeshop/pages/login_screen.dart';
-import 'package:freeshop/services/Authenticate.dart';
+//import 'package:freeshop/pages/ecran_inscription-copy.dart';
+//import 'package:freeshop/pages/form_publication.dart';
+//import 'package:freeshop/pages/login_screen.dart';
+//import 'package:freeshop/services/Authenticate.dart';
 
-import 'pages/ecran_inscription-copy.dart';
+//import 'pages/ecran_inscription-copy.dart';
 //import 'package:freeshop/pages/ecran_inscription.dart';
 //import 'package:freeshop/services/BDconnexion.dart';
 
@@ -25,15 +27,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Freeshop', debugShowCheckedModeBanner: false,
-      //home: MenuPage(),
+      // home: MenuPage(),
       //home: PageBienvenue(),
       //home: Inscription(),
-      home: Authenticate(),
-      /* routes: {
+      //home: Authenticate(),
+      //home: FormPublication(),
+      routes: {
         '/': (_) => PageAcceuil(),
         PageAcceuil.routeName: (_) => PageAcceuil(),
       },
-      */
     );
   }
 }

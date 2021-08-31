@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freeshop/pages/form_publication.dart';
+import 'package:freeshop/pages/page_login.dart';
 
 import 'main_drawer.dart';
 
@@ -11,6 +13,12 @@ class PageAcceuil extends StatefulWidget {
 
 class _PageAcceuilState extends State<PageAcceuil> {
   int _selectedIndex = 0;
+  /*final screens = [
+    PageAcceuil(),
+    LoginForm(),
+    FormPublication(),
+  ];
+*/
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -20,61 +28,66 @@ class _PageAcceuilState extends State<PageAcceuil> {
   static const TextStyle optionStyle = TextStyle(
     fontSize: 7,
     fontWeight: FontWeight.bold,
+    //color: Colors.black,
   );
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    PageAcceuil(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          //title: Text('Freeshop Acceuil'),
-          ),
+        backgroundColor: Colors.white70,
+        //title: Text('Freeshop Acceuil'),
+      ),
       drawer: MainDrawer(),
-      body: Center(
+      //body: screens[_selectedIndex],
+      body: Container(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
             label: 'Home',
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.search, color: Colors.black),
             label: 'Recherche',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_shopping_cart_outlined),
+            icon: Icon(
+              Icons.add_a_photo_sharp,
+              color: Colors.black,
+            ),
+            label: 'Publier',
+            backgroundColor: Colors.white,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.add_shopping_cart_outlined,
+              color: Colors.black,
+            ),
             label: 'Shop',
-            backgroundColor: Colors.purple,
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
+            icon: Icon(
+              Icons.notifications,
+              color: Colors.black,
+            ),
             label: 'Notification',
-            backgroundColor: Colors.grey,
+            backgroundColor: Colors.white,
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.black,
         onTap: _onItemTapped,
       ),
     );

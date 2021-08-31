@@ -4,7 +4,10 @@ import 'package:freeshop/pages/login_screen.dart';
 //import 'package:firebase_core/firebase_core.dart';
 
 Future<User> createAccount(
-    String _nomComplet, String _email, String _mdp) async {
+  String _nomComplet,
+  String _email,
+  String _mdp,
+) async {
   FirebaseAuth _auth = FirebaseAuth.instance;
 
   try {
